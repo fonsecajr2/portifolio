@@ -3,7 +3,7 @@ import React from 'react';
 export default function Projects() {
     return (
         <div>
-        projects component
+        <h1 className='hover:text-accent'>projects component</h1>
         </div>
     );
 }
