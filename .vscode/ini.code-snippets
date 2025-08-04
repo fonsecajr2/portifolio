@@ -1,0 +1,17 @@
+{
+	"Next.js Component with Filename as Function Name": {
+		"prefix": "ncomp",
+		"body": [
+			"import React from 'react';",
+			"",
+			"export default function ${TM_FILENAME_BASE}() {",
+			"  return (",
+			"    <div>",
+			"      ${TM_FILENAME_BASE} component",
+			"    </div>",
+			"  );",
+			"}"
+		],
+		"description": "Creates a functional React component with export default named after the file"
+	}
+}

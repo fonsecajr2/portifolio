@@ -1,26 +1,21 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@config "../tailwind.config.js";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* app/globals.css */
+@layer base {
+  body {
+    @apply bg-primary font-primary text-white leading-loose;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* @theme inline {
+  --color-primary: #1c1c22;
+  --font-primary: var(--font-jetbrainsMono);
+} */
+
+/* @layer utilities {
+  .font-primary {
+    font-family: var(--font-jetbrainsMono);
+  }
+} */
