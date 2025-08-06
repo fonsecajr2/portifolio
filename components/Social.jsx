@@ -8,10 +8,16 @@ const socials = [
     { icon: <FaTwitter />, path: ""},
 ]
 
-export default function Social() {
+export default function Social({containerStyle, iconStyle}) {
     return (
-        <div>
-        Social component
+        <div className={containerStyle}>
+            {socials.map((item, index) =>{
+                return (
+                    <Link key={index} href={item.path} className={iconStyle}>
+                        {item.icon}
+                    </Link>
+                )
+            })}
         </div>
     );
 }
