@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 import { BsArrowUpRight, BsGithub} from "react-icons/bs";
 
@@ -25,7 +26,7 @@ const projects = [
         title: "Project 1",
         description: "Lorem Ipsum",
         stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "Js"}],
-        image: "/images/project1.jpg",
+        image: "/",
         live: "",
         github: "",
     },
@@ -35,7 +36,7 @@ const projects = [
         title: "Project 2",
         description: "Lorem Ipsum",
         stack: [{name: "ExpressJs"}, {name: "NodeJs"}, {name: "Js"}],
-        image: "/images/project2.jpg",
+        image: "/",
         live: "",
         github: "",
     },
@@ -45,7 +46,7 @@ const projects = [
         title: "Project 3",
         description: "Lorem Ipsum",
         stack: [{name: "Phyton"}, {name: "Django"}, {name: "Html 5"}],
-        image: "/images/project2.jpg",
+        image: "/",
         live: "",
         github: "",
     },
@@ -54,6 +55,11 @@ const projects = [
 export default function Projects() {
     const [project, setProject] = useState(projects[0]);
 
+    const handleSlideChange = (swiper) => {
+        //get current slide index
+        const currentIndex = swiper.activeIndex;
+        setProject(projects[currentIndex])
+    }
 
     return (
         <motion.section
@@ -125,7 +131,36 @@ export default function Projects() {
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%]">
-                        <Swiper></Swiper>
+                        <Swiper
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            className="xl:h-[520px] mb-12"
+                            onSlideChange={handleSlideChange}
+                        >
+                            {projects.map((project, index) => {
+                                return (
+                                    <SwiperSlide key={index} className="w-full">
+                                        <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                                            {/* Overlay */}
+                                            <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10">
+
+                                            </div>
+
+                                            {/* image */}
+                                            <div className="relative w-full h-full">
+                                                <Image src={project.image} fill alt="" className="object-cover"/>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                );
+                            })}
+
+                            {/* slider buttons */}
+                            <WorkSliderBtns
+                                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                            />
+                        </Swiper>
                     </div>
                 </div>
             </div>
