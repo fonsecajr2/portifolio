@@ -53,22 +53,22 @@ const about = {
 const experience = {
     icon: "/assets/resume/badge.svg",
     title: "Experience",
-    description: "I have worked on various projects, honing my skills in software development and problem-solving. My experience includes working with diverse technologies and collaborating with teams to deliver high-quality solutions.",
+    description: "Backend and full-stack developer experienced in MERN stack, TypeScript, and MySQL. Skilled at building fast, secure, and scalable systems, with a track record of delivering high-quality web and WordPress solutions in collaborative team environments.",
     items: [
         {
-            company: "Tech Solutions",
-            position: "Software Developer",
-            duration: "Jan 2022 - Present",
+            company: "Neuxa Global",
+            position: "Backend Developer",
+            duration: "May 2025 - Present",
         },
         {
-            company: "Tech Solutions",
+            company: "GaoTek Inc.",
             position: "Wordpress Developer",
-            duration: "Jan 2022 - Present",
+            duration: "Feb 2025 - June 2025",
         },
         {
-            company: "Tech Solutions",
-            position: "Web Developer Trainee",
-            duration: "Jan 2022 - Present",
+            company: "Unified Mentor",
+            position: "Web Developer(MERN) Trainee",
+            duration: "Apr 2025 - May 2025",
         },
         {
             company: "Tech Solutions",
@@ -87,7 +87,7 @@ const experience = {
 const education = {
     icon: "/assets/resume/cap.svg",
     title: "My Education",
-    description: "I have worked on various projects, honing my skills in software development and problem-solving. My experience includes working with diverse technologies and collaborating with teams to deliver high-quality solutions.",
+    description: "I began my studies in Mozambique, gaining a solid base in maths, physics, and OOP with C++. Since moving to India, now in my 3rd year, I’ve focused on web development, system design, architecture, and the full software development lifecycle.",
     items: [
         {
             institution: "Unizambe University",
@@ -95,9 +95,9 @@ const education = {
             duration: "Jan 2023 - Nov 2023",
         },
         {
-            instution: "GD Goenka University",
+            institution: "GD Goenka University",
             degree: "Computer Science and Engineering",
-            duration: "Jan 2024 - Present (Graduation Expected: Jul 2027)",
+            duration: "Jan 2024 - Present(2027)",
         },
     ]
 }
