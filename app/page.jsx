@@ -18,7 +18,8 @@ export default function Home() {
             <p>I Excel in coding, problem solving and adapting</p>
             {/* btns */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button 
+              <a href="/assets/Fonseca_Junior_Resume.pdf" download="Fonseca_Junior_Resume.pdf">
+                <Button 
                 className="uppercase flex items-center gap-2"
                 variant={"outline"}
                 size={"lg"}
@@ -26,6 +27,7 @@ export default function Home() {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyle="flex gap-6"
