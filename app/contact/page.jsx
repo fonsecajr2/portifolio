@@ -44,10 +44,10 @@ export default function page() {
         e.preventDefault();
         emaijs
         .sendForm(
-            "serviceId",
-            "templateId",
+            "service_ib8g1wq",
+            "template_d5gsoog",
             form.current,
-            "publicKey",
+            "YG7UbkqiRRb-fwmkf",
         )
         .then(
             () => {
