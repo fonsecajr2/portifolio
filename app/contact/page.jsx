@@ -12,6 +12,8 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
+import { useRef } from "react";
+import emaijs from "emailjs-com";
 
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
@@ -36,6 +38,27 @@ const info = [
 import { motion } from "framer-motion";
 
 export default function page() {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emaijs
+        .sendForm(
+            "serviceId",
+            "templateId",
+            form.current,
+            "publicKey",
+        )
+        .then(
+            () => {
+                alert("Message sent successfully!");
+            },
+            (error) => {
+                alert("Failed to send message: " + error.text);
+            }
+        )
+    }
+
     return (
         <motion.section 
             initialinitial={{ opacity: 0 }}
@@ -49,7 +72,7 @@ export default function page() {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <form action="" className="flex flex-col gap-6 p-10 bg-[#27272c] rounde-xl">
+                        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6 p-10 bg-[#27272c] rounde-xl">
                             <h3 className="text-4xl text-accent">Let's Work Together</h3>
                             <p className="text-white/60">
                                 I’m a backend developer passionate about building fast, secure, and reliable systems. Skilled in TypeScript, Express.js, MongoDB, MySQL, and the MERN stack, I create clean and scalable solutions that power great user experiences.
@@ -57,14 +80,14 @@ export default function page() {
 
                             {/* input */}
                             <div className="grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="First Name"/>
-                                <Input type="lastname" placeholder="Last Name"/>
-                                <Input type="email" placeholder="Email Address"/>
+                                <Input type="firstname" name="first_name" placeholder="First Name" required/>
+                                <Input type="lastname" name="last_name" placeholder="Last Name" required/>
+                                <Input type="email" name="email" placeholder="Email Address" required/>
                                 <Input type="phone" placeholder="Phone Number"/>
                             </div>
 
                             {/* select */}
-                            <Select>
+                            <Select name="service">
                                 <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
@@ -74,15 +97,16 @@ export default function page() {
                                         <SelectItem value="est">Web Development</SelectItem>
                                         <SelectItem value="cst">UI/UX Design</SelectItem>
                                         <SelectItem value="mst">Logo Design</SelectItem>
+                                        <SelectItem value="inf">Info</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
 
                             {/* textarea */}
-                            <Textarea className="h-[200px]" placeholder="Type your message here."/>
+                            <Textarea className="h-[200px]" placeholder="Type your message here." name="message" required/>
 
                             {/* button */}
-                            <Button size="md" className="max-w-40">Send message</Button>
+                            <Button size="md" className="max-w-40" type="submit">Send message</Button>
                         </form>
                     </div>
 
