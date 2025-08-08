@@ -52,7 +52,7 @@ export default function page() {
                         <form action="" className="flex flex-col gap-6 p-10 bg-[#27272c] rounde-xl">
                             <h3 className="text-4xl text-accent">Let's Work Together</h3>
                             <p className="text-white/60">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis dicta veniam beatae ipsa consequuntur assumenda, repellendus cum ratione, tenetur excepturi enim rem minus impedit incidunt quaerat quasi perspiciatis numquam!
+                                I’m a backend developer passionate about building fast, secure, and reliable systems. Skilled in TypeScript, Express.js, MongoDB, MySQL, and the MERN stack, I create clean and scalable solutions that power great user experiences.
                             </p>
 
                             {/* input */}
