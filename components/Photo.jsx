@@ -22,12 +22,13 @@ export default function Photo() {
         }}
         className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
           <Image
-            src={"/assets/photo.jpg"}
+            src={"/assets/photo.png"}
             priority
             quality={"100"}
             fill
             alt=""
             className="object-contain"
+            style={{ clipPath: 'circle(50%)', objectFit: 'cover' }}
           />
         </motion.div>
 
