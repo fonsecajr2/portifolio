@@ -22,33 +22,33 @@ import Image from "next/image";
 const projects = [
     {
         num: "01",
-        category: "frontend",
+        category: "Full Stack",
         title: "Project 1",
-        description: "Lorem Ipsum",
-        stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "Js"}],
+        description: "A platform that simplifies scheduling between students and teachers with role-based dashboards, appointment booking and management, messaging, and administrative oversight for a smooth, organized experience. Please check the README.md on Github Repo for login details.",
+        stack: [{name: "React"}, {name: "Firebase"}, {name: "Vite"}, {name: "Tailwind CSS"}],
         image: "/assets/projects/photo1.png",
-        live: "",
-        github: "",
+        live: "https://student-teacher-appointment-eight.vercel.app/",
+        github: "https://github.com/fonsecajr2/Student-Teacher-Appointment",
     },
     {
         num: "02",
-        category: "backend",
+        category: "Front-End",
         title: "Project 2",
-        description: "Lorem Ipsum",
-        stack: [{name: "ExpressJs"}, {name: "NodeJs"}, {name: "Js"}],
-        image: "/",
-        live: "",
-        github: "",
+        description: "A sleek, responsive music player that lets users play, pause, skip tracks, adjust volume, and navigate songs with ease. Displays track details and album art, and allows users to add or upload their own music to a personalized playlist.",
+        stack: [{name: "React"}, {name: "Vite"}, {name: "Tailwind CSS"}, {name: "JavaScript"},],
+        image: "/assets/projects/photo3.png",
+        live: "https://music-player-amber-eight.vercel.app/",
+        github: "https://github.com/fonsecajr2/music-player",
     },
     {
         num: "03",
-        category: "backend",
+        category: "Front-End",
         title: "Project 3",
-        description: "Lorem Ipsum",
-        stack: [{name: "Phyton"}, {name: "Django"}, {name: "Html 5"}],
-        image: "/",
-        live: "",
-        github: "",
+        description: "A simple and intuitive task manager that lets users add, complete, delete, and view task details, with automatic saving so tasks remain even after closing the browser.",
+        stack: [{name: "React"}, {name: "Uuid"}, {name: "Tailwind CSS"}],
+        image: "/assets/projects/photo4.png",
+        live: "https://todolist-26zf.vercel.app/",
+        github: "https://github.com/fonsecajr2/todolist",
     },
 ]
 
@@ -72,6 +72,7 @@ export default function Projects() {
         >
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+                    {/* Text Section */}
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* outline num */}
@@ -104,7 +105,7 @@ export default function Projects() {
                             {/* buttons */}
                             <div className="flex items-center gap-4">
                                 {/* live project button */}
-                                <Link href={project.live}>
+                                <Link href={project.live} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -118,7 +119,7 @@ export default function Projects() {
                                 </Link>
 
                                 {/* github project button */}
-                                <Link href={project.live}>
+                                <Link href={project.github} target="_blank">
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -133,6 +134,7 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
+                    {/* Image Section */}
                     <div className="w-full xl:w-[50%]">
                         <Swiper
                             spaceBetween={30}
