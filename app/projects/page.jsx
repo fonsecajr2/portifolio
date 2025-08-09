@@ -26,7 +26,7 @@ const projects = [
         title: "Project 1",
         description: "Lorem Ipsum",
         stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "Js"}],
-        image: "/",
+        image: "/assets/projects/photo1.png",
         live: "",
         github: "",
     },
