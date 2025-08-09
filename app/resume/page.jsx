@@ -9,9 +9,28 @@ import {
     FaNodeJs,
     FaGitAlt,
     FaPython,
+    FaJava,
+    FaWordpress,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import {
+    SiNextdotjs,
+    SiTailwindcss,
+    SiTypescript,
+    SiKubernetes,
+    SiMysql,
+    SiMongodb,
+    SiExpress,
+    SiPostgresql, // Using PostgreSQL as a general DB icon
+    SiLinux,
+    SiDocker,
+    SiFirebase,
+    SiOpenshift,
+    SiPhp,
+    SiNodedotjs,
+    SiCplusplus,
+    SiNpm,
+} from "react-icons/si";
 
 // About data
 const about = {
@@ -107,36 +126,31 @@ const skills = {
     title: "My Skills",
     description: "my skills that i gain through my carrer",
     skillList: [
-        {
-            icon: <FaHtml5 />,
-            name: "html 5",
-        },
-        {
-            icon: <FaCss3 />,
-            name: "css 3",
-        },
-        {
-            icon: <FaJs />,
-            name: "javascript",
-        },
-        {
-            icon: <FaReact />,
-            name: "react.js",
-        },
-        {
-            icon: <SiNextdotjs />,
-            name: "next.js",
-        },
-        {
-            icon: <SiTailwindcss />,
-            name: "tailwind css",
-        },
-        {
-            icon: <FaNodeJs />,
-            name: "node.js",
-        },
-    ]
-}
+        { icon: <FaHtml5 />, name: "html 5" },
+        { icon: <FaCss3 />, name: "css 3" },
+        { icon: <FaJs />, name: "javascript" },
+        { icon: <SiTypescript />, name: "typescript" },
+        { icon: <FaReact />, name: "react.js" },
+        { icon: <SiNextdotjs />, name: "next.js" },
+        { icon: <SiTailwindcss />, name: "tailwind css" },
+        { icon: <FaNodeJs />, name: "node.js" },
+        { icon: <SiExpress />, name: "express.js" },
+        { icon: <FaPython />, name: "python" },
+        { icon: <SiPhp />, name: "php" },
+        { icon: <FaJava />, name: "java" },
+        { icon: <SiCplusplus />, name: "c++" },
+        { icon: <SiKubernetes />, name: "kubernetes" },
+        { icon: <SiDocker />, name: "docker" },
+        { icon: <SiLinux />, name: "linux" },
+        { icon: <SiMysql />, name: "mysql" },
+        { icon: <SiMongodb />, name: "mongodb" },
+        { icon: <SiFirebase />, name: "firebase" },
+        // { icon: <SiOpenshift />, name: "openshift" },
+        { icon: <FaGitAlt />, name: "git & github" },
+        { icon: <FaWordpress />, name: "wordpress" },
+        { icon: <SiNpm />, name: "npm" },
+    ],
+};
 
 import { Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"; 
 
