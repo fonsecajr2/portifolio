@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body
-        className={`${jetbrainsMono.variable}`}
+        className={`${jetbrainsMono.variable} xl:pl-8 xl:pr-8`}
       >
         <Header />
         <StairTransition />

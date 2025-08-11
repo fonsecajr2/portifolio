@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-12">
           {/* Text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Develepor Engineer</span>
@@ -37,12 +37,13 @@ export default function Home() {
             </div>
           </div>
           {/* Photo */}
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mb-4 xl:mb-0">
             <Photo />
           </div>
         </div>
+        <Stats />
       </div>
-      <Stats />
+      
     </section>
   );
 }
