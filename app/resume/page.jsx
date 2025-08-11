@@ -43,7 +43,7 @@ const about = {
         },
         {
             fieldName: "Phone",
-            fieldValue: "(+91) 92116 98442",
+            fieldValue: "+91 9211698442",
         },
         {
             fieldName: "Experience",
@@ -172,7 +172,7 @@ export default function Resume() {
                 opacity: 1,
                 transition: { delay: 2.4, duration: 0.4, ease: "easeIn"}
             }}
-            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+            className="min-h-[80vh] flex items-center justify-center py-12 xl:py-5"
         >
             <div className="container mx-auto">
                 <Tabs
@@ -275,13 +275,13 @@ export default function Resume() {
                         <TabsContent className="w-full text-center xl:text-left" value="about">
                             <div className="flex flex-col gap-[30px]">
                                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                                <p className="max-w-[620px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <ul className="grid grid-cols-1 xl:grid-cols-[2fr_1fr] gap-y-6 max-w-[700px] mx-auto xl:mx-0">
                                     {about.info.map((item, index) => {
                                         return (
                                             <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
                                                 <span className="text-white/60">{item.fieldName}</span>
-                                                <span className="text-xl">{item.fieldValue}</span>
+                                                <span className="text-xl break-words whitespace-normal">{item.fieldValue}</span>
                                             </li>
                                         )
                                     })}
