@@ -75,4 +75,4 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 
 ---
 
-Feel free to modify and extend this portfolio to best represent your skills and projects!
+This project is public solely for structural reference; all original contents and data are private.
